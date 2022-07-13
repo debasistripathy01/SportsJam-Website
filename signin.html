@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singin Page</title>
+
+    <style>
+        .body {
+            background-color: lightsalmon;
+        }
+        
+        .signin {
+            /* border: 1px solid black; */
+            height: 500px;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            background-color: white;
+            margin-top: 150px;
+            justify-content: center;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        
+        .form>input {
+            height: 30px;
+            border-radius: 2.5px;
+            outline: none;
+            width: 88%;
+            border: 1px solid;
+            margin-top: 7%;
+            padding-top: 1%;
+        }
+    </style>
+
+</head>
+
+<body id="body">
+    <div class="signin">
+        <!---signcon-->
+        <h1>SIGN IN</h1>
+        <form class="form">
+            <input id="mail" type="text" placeholder="Enter Email ID">
+            <input id="passwd" type="password" placeholder="Enter Password">
+            <input type="submit" value="Sign In">
+
+        </form>
+    </div>
+</body>
+
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", formSubmit);
+
+    var userData = JSON.parse(localStorage.getItem("userDataBase"));
+
+    function formSubmit(event) {
+        event.preventDefault();
+        var email = document.querySelector("#mail").value;
+        var Password = document.querySelector("#passwd").value;
+
+        for (var i = 0; i < userData.length; i++) {
+            console.log(userData[i].mail, userData[i].passwd);
+            if (userData[i].mail == email && userData[i].passwd == Password) {
+                alert("login successful")
+                window.location.href = "homepage.html"
+
+            } else {
+                alert("Wrong ID or Password");
+
+            }
+        }
+    }
+</script>

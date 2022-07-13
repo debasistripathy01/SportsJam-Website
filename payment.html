@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+ 
+        #main{
+            height:1220px;
+            width:100%;
+            background-color: WhiteSmoke;
+ 
+            padding:50px;
+
+        }
+        #container{
+            height:1200px;
+            width:98%;
+            background-color: white;
+            margin:auto;
+            
+  
+           
+
+        }
+        #logos{
+            display:flex;
+            height:4%;
+            width:40%;
+             
+            margin-left: 740px;
+            justify-content:space-between;
+            background-color: whitesmoke;
+        }
+       
+        #img1{
+           
+            width:200px;
+            height:50px;
+        }
+        #img2{
+            width:120px;
+            height:50px;
+
+        }
+        #img3{
+            width:110px;
+            height:48px;
+        }
+        #div1{
+   
+            height:auto;
+            width:95%;
+            margin:auto;
+        }
+        #logoimg{
+            height:100px;
+            width:300px;
+        }
+        #billinfo{
+    
+            height: 40%;
+            width:95%;
+            margin:auto;
+        }
+        #paymentinfo{
+             
+            height: 45%;
+            width:84.5%;
+            margin-left: 2.5%;
+             
+        }
+        #bill1{
+            width:70%;
+            height:30px;
+            border: 1px solid pink;
+            font-size: 22px;
+            background-image: linear-gradient(to right, rgb(10, 112, 10) , rgb(166, 247, 122));
+            border-radius: 7px;
+            padding:10px;
+            color:white;
+            font-family: 'Poppins', sans-serif;
+        }
+        #orderdetails{
+            
+            display:flex;
+        }
+        #pymnt1{
+            width:81%;
+            height:30px;
+             
+            font-size: 22px;
+             background-image: linear-gradient(to right, rgb(10, 112, 10) , rgb(166, 247, 122));
+            border-radius: 7px;
+            padding:10px;
+            color:white;
+            font-family: 'Poppins', sans-serif;
+            margin-top: 50px;
+        }
+        #pymntmain{
+            display:flex;
+            margin-top: 15px;
+            width:1000px;
+
+        }
+        #pymntmeths{
+            font-size: 16px;
+            width:30%;
+        
+
+        }
+        #pymntmeths>div{
+            border:1px solid grey;
+            height:7%;
+            font-size: 18px;
+            width:90%; 
+            color: rgb(10, 1, 1);
+            padding-left: 9px;
+            padding-top: 10px; 
+            
+            font-family: 'Poppins', sans-serif;
+        }
+        #pymntmeths>div:hover{
+            background-color: red;
+            cursor: pointer;
+            color: white;
+        }
+        #carddetails{
+            font-family: 'Poppins',sans-serif;
+            margin:0;padding:0;
+            box-sizing:border-box;
+            outline:none;
+            border:none;
+            text-decoration: none;
+            min-height: 680px;
+    
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow:column;
+            padding-bottom: 30px;
+            width:70%;
+
+        }
+        #carddetails form{
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 10px 15px rgba(0,0,0,.1);
+            padding: 10px;
+            width:500px;
+            margin-top: -200px;
+
+        }
+        #carddetails form #inputbox{
+            margin-top: 10px;
+        }
+        #carddetails form #inputbox span{
+            display:block;
+            color:rgb(26, 3, 3);
+            padding-bottom: 5px;
+            font-size: 19px;
+        }
+
+        #carddetails form #inputbox input,
+        #carddetails form #inputbox select{
+            
+            width:90%;
+            padding:10px;
+            border:1px solid rgba(0,0,0,.3);
+            color:#444;
+        }
+        #carddetails form #flexbox{
+            display:flex;
+            gap:25px;
+            width:93%;
+
+        }
+        #carddetails form #flexbox #inputbox{
+            flex:1 1 150px;
+        }
+
+        #submitbtn1{
+            width:25%;
+            background-image: linear-gradient(to right, rgb(10, 112, 10) , rgb(166, 247, 122));
+        
+            font-size:14px;
+            color:#fff;
+            cursor:pointer;
+             height:35px;
+        }
+        #submitbtn2{
+            width:25%;
+            background-image: linear-gradient(to right, rgb(10, 112, 10) , rgb(166, 247, 122));
+        
+            font-size:14px;
+            color:#fff;
+            cursor:pointer;
+             height:35px;
+             margin-left: 30px;
+        }
+        #submit-btn1:hover{
+            letter-spacing: 2px;
+            opacity: .8;
+        }
+
+         
+      
+       
+         #carddetails #cardcontainer #front #cardnumberbox{
+             padding:30px 0;
+             font-size: 22px;
+             color:#fff;
+
+         }
+         #billnm{
+             width:65%;
+             height:30px;
+             font-size: 20px;
+             margin-top:-70px;
+             margin-left:10px;
+         }
+         #addnm{
+             width:65%;
+             height:30px;
+             font-size: 20px;
+             margin-top:30px;
+             margin-left:10px;
+         }
+         #billflex1{
+             width:66%;
+             height:auto;
+             font-size: 20px;
+             margin-top:30px;
+             margin-left:10px;
+             
+         }
+         #bill3{
+            height:30px;
+            font-size: 20px;
+            width:45%;
+         }
+         #bill4{
+             height:30px;
+             font-size: 20px;
+             width:45%;
+             margin-left:58px; 
+         }
+         #billflex2{
+             width:66%;
+             height:auto;
+             font-size: 20px;
+             margin-top:30px;
+             margin-left:10px;
+             
+         }
+         #bill5{
+            height:30px;
+            font-size: 20px;
+            width:45%;
+         }
+         #bill6{
+             height:30px;
+             font-size: 20px;
+             width:45%;
+             margin-left:58px; 
+         }
+         #billflex3{
+             width:66%;
+             height:auto;
+             font-size: 20px;
+             margin-top:30px;
+             margin-left:10px;
+             
+         }
+         #bill7{
+            height:30px;
+            font-size: 20px;
+            width:45%;
+         }
+         #bill8{
+             height:30px;
+             font-size: 20px;
+             width:45%;
+             margin-left:58px; 
+         }
+         #notes{
+            width:65%;
+             height:30px;
+             font-size: 20px;
+             margin-top:30px;
+             margin-left:10px;
+         }
+          #cardsimg{
+              width:250px;
+            
+            
+          }
+          #cardnumberinput{
+              background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg-aIbegXTuKD72gcbiDOahjEhV63kZbZLAg&usqp=CAU");
+              background-position:right;
+              background-size: 250px;
+              background-repeat: no-repeat;
+
+          }
+           
+        marquee{
+            width: 26%;
+        }
+        #ordervalues{
+            margin-left:-360px;
+             
+            height:200px;
+             width:500px;
+             justify-content: space-between;
+             line-height: 10px;
+        }
+        hr{
+            border:1px solid grey;
+        }
+        #formid{
+            width:1300px;
+            margin-top: 45px;
+        }
+        #defaultaddress{
+            margin-top:20px;
+        }
+        @media only screen and (min-width: 400px) and (max-width: 750px) {
+               
+        #main{
+            height:1220px;
+            width:auto;
+            background-color: WhiteSmoke;
+ 
+            padding:50px;
+
+        }
+        #container{
+            height:1200px;
+            width:auto;
+            background-color: white;
+            margin:auto;
+        }
+        #billinfo{
+    
+            height: 40%;
+            width:350px;
+            margin:auto;
+        }
+        #paymentinfo{
+            
+            height: 0;
+        
+                       
+        }
+        #pymntmain{
+        width:350px;
+
+        }
+            }
+        @media only screen and (min-width: 0px) and (max-width: 400px) {
+            
+        #main{
+            height:1220px;
+            width:auto;
+            background-color: WhiteSmoke;
+ 
+            padding:50px;
+
+        }
+        #container{
+            height:1200px;
+            width:auto;
+            background-color: white;
+            margin:auto;
+
+        }
+        #billinfo{
+    
+            height: 40%;
+            width:auto;
+            margin:auto;
+        }
+        #paymentinfo{
+            
+            height: 45%;
+            width:auto;
+            margin-left: 2.5%;
+            
+        }
+        #orderdetails{
+            width:300px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="container">
+            <div id="div1">
+                <marquee behavior="slide" direction="right" loop="1">
+                <img id="logoimg" src="https://dashboard.ccavenue.com/ImgStore/Images/302_Gatewaylogo_1505158783205.png"/>
+                </marquee>      
+                <hr>
+            </div>
+
+            <div id="billinfo">
+                <div id="bill1">
+                    Billing Information
+                </div>
+                <div id="orderdetails">
+                    
+                    <form id="form1">
+                        <div id="formid">
+                        <input id="billnm" type="text" placeholder="Billing Name">
+                        
+                        <input id="addnm" type="text" placeholder="Address">
+                        
+                        <div id="billflex1">
+                        <input id="bill3" type="text" placeholder="Zip Code">
+                        <input id="bill4" type="text" placeholder="City">
+                        </div>
+                        <div id="billflex2">
+                            <input id="bill5" type="text" placeholder="State">
+                            <input id="bill6" type="text" placeholder="Country">
+                            </div>
+                            <div id="billflex3">
+                                <input id="bill7" type="number" placeholder="Mobile Number">
+                                <input id="bill8" type="email" placeholder="Email">
+                                </div>
+                            <input id="notes" type="text" placeholder="Notes(Optional)">
+                            <div>
+                                <input type="checkbox" id="defaultaddress" name="default" value="defaultadd" onclick="myFunction3()">
+                                <label for="defaultaddress">Same as given Address</label>
+                              </div>
+                    </form>
+                </div>
+                    <div id="ordervalues"><h2>ORDER DETAILS</h2>
+                    
+                    <h3>Order #: 234 </h3>
+                    <hr>
+                    <p id="totalamount1">Order Amount &emsp;&ensp; =&emsp;&ensp; </p>
+                    <hr>
+                    <h3 id="totalamount2">Total Amount &ensp;= &emsp; </h3>
+                
+                
+                
+                
+                
+                </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div id="paymentinfo">
+                <div id="pymnt1">Payment Information</div>
+                <div id="pymntmain">
+                    <div id="pymntmeths">
+                    <div>Credit Card ></div>
+                    <div>Debit Cards</div>
+                    <div>Net Banking</div>
+                    <div>Paytm </div>
+                    <div>Wallet</div>
+                    <div>UPI</div>
+                    <div>EMI Options</div>
+                    <div>Pay Later</div>  
+                    </div>
+                    <div id="carddetails">
+                        <div id="cardcontainer">
+                            <div id="front">
+                                  
+                                <div id="flexbox">
+                                    <div id="box">
+                                        <span></span>
+                                        <div id="cardholder"></div>
+                                        <div id="box">
+                                            <div id="expiration">
+                                                 
+                                                 
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                             
+                        </div>
+                        <form>
+                            <div id="inputbox">
+                                <span>Card Number</span>
+                                <input id="cardnumberinput" type="text" maxlength="16" placeholder="Enter your card number">
+
+                            </div>
+                            <div id="inputbox">
+                                <span>Card Holder Name</span>
+                                <input id="cardholder" type="text" maxlength="16" placeholder="Enter Name">
+                                
+                            </div>
+                            <div id="flexbox">
+                            <div id="inputbox">
+                                <span>Expiry date</span>
+                                 <select name="" id="" class="month-input">
+                                     <option value="month" selected disabled>month</option>
+                                     <option value="01">01</option>
+                                     <option value="02">02</option>
+                                     <option value="03">03</option>
+                                     <option value="04">04</option>
+                                     <option value="05">05</option>
+                                     <option value="06">06</option>
+                                     <option value="07">07</option>
+                                     <option value="08">08</option>
+                                     <option value="09">09</option>
+                                     <option value="10">10</option>
+                                     <option value="11">11</option>
+                                     <option value="12">12</option>
+                                 </select>
+                                
+                            </div>
+                       
+
+                        <div id="inputbox">
+                            <span>Expiry year</span>
+                             <select name="" id="" class="year-input">
+                                 <option value="year" selected disabled>year</option>
+                                 <option value="2022">2022</option>
+                                 <option value="2023">2023</option>
+                                 <option value="2024">2024</option>
+                                 <option value="2025">2025</option>
+                                 <option value="2026">2026</option>
+                                 <option value="2027">2027</option>
+                                 <option value="2028">2028</option>
+                                 <option value="2029">2029</option>
+                                 <option value="2030">2030</option>
+                                  
+                             </select>
+                            
+                        </div>
+                        <div id="inputbox">
+                            <span>CVV</span>
+                            <input type="text" maxlength="4" class="cvv-input">
+
+                        </div>
+
+                    </div>
+                    <p>I agree with the Privacy Policy by proceeding with this<br>payment.<br>
+                        <h3 id="h2text"></h3>(Total Amount Payable)</p>
+                    <input type="submit" value="Make Payment" id="submitbtn1" onclick="myFunction()">
+                    <input type="submit" value="Cancel" id="submitbtn2" onclick="myFunction2()">
+                        </form>
+                    </div>
+            </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+        <div id="logos">
+            <div id="logo1">
+                <img id="img1" src="https://secure.ccavenue.com/images/CCAV.png"/>
+            </div>
+            <div id="logo2">
+                <img id="img2" src="data:image/jpeg;base64,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"/>                 
+            </div>
+            <div id="logo3">
+                <img id="img3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkaFogiblQ6NMRqUorb8fCmUZkCOXHvr5scw&usqp=CAU"/>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<script>
+    var cartamount = JSON.parse(localStorage.getItem("cartTotalAmount"));
+    document.querySelector("#totalamount1").innerHTML += cartamount;
+    document.querySelector("#totalamount2").innerHTML += "4000";
+    
+     
+    function myFunction(){
+        event.preventDefault();
+        window.location.href="paymentsuccess.html";
+    };
+    function myFunction2(){
+        event.preventDefault();
+        window.location.href="paymentfailed.html";
+    };
+ 
+   
+    function myFunction3(){
+         
+        document.getElementById("billnm").value="Vijay Devtula";
+        document.getElementById("addnm").value="87/4 subhash nagar line par";
+        document.getElementById("bill3").value="124507";
+        document.getElementById("bill4").value="Bahadurgarh";
+        document.getElementById("bill5").value="Haryana";
+        document.getElementById("bill6").value="India";
+        document.getElementById("bill7").value="9728129772";
+        document.getElementById("bill8").value="vijaydevtula@gmail.com";
+        document.getElementById("notes").value="Billing Information Provided";
+        
+         
+    };
+  
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Sports</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="basketballProducts.css">
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+           }
+    </style>
+</head>
+<body>
+    <!--Upper Nav start-->
+
+    <nav class="nav">
+        <div class="navdiv1">
+            <img class="navlogo" src="data:image/png;base64,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" alt="">
+            <p class="navtext">Call Us :+91-9555461555</p>
+            </div>
+        <div class="navdiv2" id="signin">
+            <img class="navlogo" src="data:image/png;base64,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" alt="">
+            <a class="navtext" href="signIn.html">Sign in</a>
+        </div>
+        <div class="navdiv3" id="logout">
+            <img class="navlogo" src="data:image/png;base64,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" alt="">
+            <a class="navtext" href="">logout</a>
+        </div>
+        <div class="navdiv4" id="acnt">
+            <img class="navlogo" src="data:image/png;base64,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" alt="">
+            <a class="navtext" href="signUp.html">Create Account</a>
+        </div>
+        <div class="navdiv5">
+            <img class="navlogo-wishlist" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAeRlpp4wFsc4ddz6dBcUol9nz3AqIszyZew&usqp=CAU" alt="">
+            <p class="navtext-wishlist">Wishlist</p>
+        </div>
+    </nav>
+
+    <!--Upper Navbar end-->
+
+    <!--Second Navbar start-->
+
+    <div class="second_Nav">
+        <div class="sportsjam_logodiv_menu_image">
+            <img class="menu_img" src="https://w7.pngwing.com/pngs/639/1013/png-transparent-hamburger-button-computer-icons-drop-down-list-fast-food-menu-rectangle-share-icon-pancake-thumbnail.png" alt="">
+        </div>
+        <div class="sportsjam_logodiv">
+            <img class="sportsjam_logo" src="https://image3.mouthshut.com/images/imagesp/925992166s.jpg" alt="">
+        </div>
+        <div class="searchBardiv">
+            <input class="searchBar" type="search" placeholder="Search">
+            <div class="searchbarimg">
+               <img src="https://www.pnglib.com/wp-content/uploads/2020/08/simple-grey-search-icon_5f34a64f04780-768x748.png" alt="">
+           </div>
+        </div>
+        <div class="cartdiv">
+            <img class="cartimg" src="https://png.pngitem.com/pimgs/s/522-5226692_my-shopping-cart-icon-for-my-cart-hd.png" alt="">
+            <p class="cartText">Shopping Cart</p>
+        </div>
+    </div>
+
+
+ <!--Second Navbar End-->
+
+ <!----Drop down Menu Start-->
+
+    <div class="category-container">
+        <nav class="category-navbar">
+            <ul>
+                <li>SPORTS
+                    <div class="mega-menu-1">
+                        <div class="inner-mega-menu-1">
+                            <a href="badmintonProducts.html"> <p class="brand">Badminton</p></a>
+                            <p class="brand-fellow">Rackets</p>
+                            <p class="brand-fellow">Shoes</p>
+                            <p class="brand-fellow">Shuttlecock</p>
+                            <p class="brand-fellow">Grips</p>
+                            <p class="brand-fellow">Strings</p>
+                            <p class="brand-fellow">Kit Bags</p>
+                            <p class="brand-fellow">Clothing</p>
+                            <p class="brand-fellow">Accessories</p>
+                            <a href="basketballProducts.html"><p class="brand">Basketball</p></a> 
+                            <p class="brand-fellow">Basketballs</p>
+                            <p class="brand-fellow">Shoes</p>
+                            <p class="brand-fellow">Equipments</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <a href="boxingProducts.html"><p class="brand">Boxing</p></a>
+                            <p class="brand-fellow">Gloves</p>
+                            <p class="brand-fellow">Bags</p>
+                            <p class="brand-fellow">Accessories</p>
+                            <a> <p class="brand">Cricket</p></a>
+                            <p class="brand-fellow">English Willow</p>
+                            <p class="brand-fellow">Kashmir Willow</p>
+                            <p class="brand-fellow">Balls</p>
+                            <p class="brand-fellow">Shoes</p>
+                            <p class="brand-fellow">Kit Bags</p>
+                            <p class="brand-fellow">Cricket Sets</p>
+                            <p class="brand-fellow">Protective Gear</p>
+                            <p class="brand-fellow">Clothing</p>
+                            <p class="brand-fellow">Accessories</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <a href="footballProducts.html"> <p class="brand">Football</p></a>
+                            <p class="brand-fellow">Footballs</p>
+                            <p class="brand-fellow">Goalie Gloves</p>
+                            <p class="brand-fellow">Shin Guards</p>
+                            <p class="brand-fellow">Shoes</p>
+                            <p class="brand-fellow">Accessories</p>
+                            <p class="brand">Hockey</p>
+                            <p class="brand-fellow">Sticks</p>
+                            <p class="brand-fellow">Balls</p>
+                            <p class="brand">Swimming</p>
+                            <p class="brand-fellow">Swimwear</p>
+                            <p class="brand-fellow">Goggles</p>
+                            <p class="brand-fellow">Caps</p>
+                            <p class="brand-fellow">Accessories</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Golf</p>
+                            <p class="brand-fellow">Drivers</p>
+                            <p class="brand-fellow">Irons</p>
+                            <p class="brand-fellow">Putters</p>
+                            <p class="brand-fellow">Fairway Woods</p>
+                            <p class="brand-fellow">Wedges</p>
+                            <p class="brand-fellow">Rescue & Hybrid</p>
+                            <p class="brand-fellow">Balls</p>
+                            <p class="brand-fellow">Bags</p>
+                            <p class="brand-fellow">Golf Sets</p>
+                            <p class="brand-fellow">Skiz Training</p>
+                            <p class="brand-fellow">Golf Accessories</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Squash</p>
+                            <p class="brand-fellow">Rackets</p>
+                            <p class="brand-fellow">Shoes</p>
+                            <p class="brand-fellow">Grips</p>
+                            <p class="brand-fellow">Balls</p>
+                            <p class="brand-fellow">Strings</p>
+                            <p class="brand-fellow">Kit Bags</p>
+                            <p class="brand-fellow">Accessories</p>
+                            <p class="brand">Volleyball</p>
+                            <p class="brand-fellow">Volleyballs</p>
+                            <p class="brand-fellow">Nets</p>
+                            <p class="brand-fellow">Accessories</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Table Tennis</p>
+                            <p class="brand-fellow">Blades</p>
+                            <p class="brand-fellow">Rubbers</p>
+                            <p class="brand-fellow">Bats</p>
+                            <p class="brand-fellow">Balls</p>
+                            <p class="brand-fellow">Tables</p>
+                            <p class="brand-fellow">Bat Case</p>
+                            <p class="brand-fellow">Shoes</p>
+                            <p class="brand-fellow">Equipment</p>
+                            <p class="brand-fellow">Accessories</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Tennis</p>
+                            <p class="brand-fellow">Balls</p>
+                            <p class="brand-fellow">Grips</p>
+                            <p class="brand-fellow">Strings</p>
+                            <p class="brand-fellow">Kit Bags</p>
+                            <p class="brand-fellow">Shoes</p>
+                            <p class="brand-fellow">Clothing</p>
+                            <p class="brand-fellow">Accessories</p>
+                            <p class="brand-fellow">Hybrid Stringing</p>
+                        </div>
+                    </div>
+                </li>
+                <li>FITNESS
+                    <div class="mega-menu-2">
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Abs & Core</p>
+                            <p class="brand-fellow">Ab Trainers</p>
+                            <p class="brand-fellow">Gym Balls</p>
+                            <p class="brand-fellow">Fitness Mats</p>
+                            <p class="brand-fellow">Balanced Board</p>
+                            <p class="brand-fellow">Rollers</p>
+                            <p class="brand-fellow">Twisters & Wheels</p>
+                            <p class="brand-fellow">Yoga & Pilates</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Aerobics/Fitness</p>
+                            <p class="brand-fellow">Agility</p>
+                            <p class="brand-fellow">Speed</p>
+                            <p class="brand-fellow">Hand Grips</p>
+                            <p class="brand-fellow">Stepper</p>
+                            <p class="brand-fellow">Skipping Ropes</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Cardio</p>
+                            <p class="brand-fellow">Teadmills</p>
+                            <p class="brand-fellow">Cross Trainers</p>
+                            <p class="brand-fellow">Exercise Bikes</p>
+                            <p class="brand-fellow">Rowers</p>
+                            <p class="brand">Cycling</p>
+                            <p class="brand-fellow">Cyles</p>
+                            <p class="brand-fellow">Accessories</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Gym Accessories</p>
+                            <p class="brand-fellow">Gloves</p>
+                            <p class="brand-fellow">Gym Belts</p>
+                            <p class="brand-fellow">Supports</p>
+                            <p class="brand-fellow">Water Bottles</p>
+                            <p class="brand-fellow">Gym Bags</p>
+                            <p class="brand-fellow">Towels</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Strength</p>
+                            <p class="brand-fellow">Resistance Bands</p>
+                            <p class="brand-fellow">Ankle/Wrist Bands</p>
+                            <p class="brand-fellow">Dumbbells</p>
+                            <p class="brand-fellow">Kettlebells</p>
+                            <p class="brand-fellow">Medicine Ball</p>
+                            <p class="brand-fellow">Push-up Grips</p>
+                            <p class="brand-fellow">Weighted Vest</p>
+                            <p class="brand-fellow">Rods & Bars</p>
+                            <p class="brand-fellow">Weight Plates</p>
+                            <p class="brand-fellow">Multi Gym</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Running Gear</p>
+                            <p class="brand-fellow">Running Shoes</p>
+                            <p class="brand-fellow">Mens T-Shirts</p>
+                            <p class="brand-fellow">Mens Shorts</p>
+                            <p class="brand-fellow">Womens Wear</p>
+                            <p class="brand-fellow">Heart Rate Monitor</p>
+                            <p class="brand-fellow">HeadBands</p>
+                            <p class="brand-fellow">Wristbands</p>
+                            <p class="brand-fellow">Caps</p>
+                            <p class="brand-fellow">Socks</p>
+                            <p class="brand-fellow">Accessories</p>
+                        </div>
+                        <div class="inner-mega-menu-1">
+                            <img class="category-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7Er-suFzMndXjmxEseEZoufbMiM4piaLHBw&usqp=CAU" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>SHOES
+                    <div class="mega-menu-3">
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Men</p>
+                            <p class="brand-fellow">Badminton</p>
+                            <p class="brand-fellow">Basketball</p>
+                            <p class="brand-fellow">Cricket</p>
+                            <p class="brand-fellow">Football</p>
+                            <p class="brand-fellow">Running</p>
+                            <p class="brand-fellow">Squash</p>
+                            <p class="brand-fellow">Tennis</p>
+                            <p class="brand-fellow">Table Tennis</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Women</p>
+                            <p class="brand-fellow">Badminton</p>
+                            <p class="brand-fellow">Running</p>
+                            <p class="brand-fellow">Squash</p>
+                            <p class="brand-fellow">Tennis</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Junior</p>
+                            <p class="brand-fellow">Football</p>
+                            <p class="brand-fellow">Tennis</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Other</p>
+                            <p class="brand-fellow">Insoles</p>
+                            <p class="brand-fellow">Flip Flopes</p>
+                            <p class="brand-fellow">Socks</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <img class="category-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlE6Po8kdc2GHfNM59qeGq70HyTv--vPon7Q&usqp=CAU" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>CLOTHING
+                    <div class="mega-menu-4">
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Men</p>
+                            <p class="brand-fellow">T-Shirt</p>
+                            <p class="brand-fellow">Shorts</p>
+                            <p class="brand-fellow">Track Pants</p>
+                            <p class="brand-fellow">Sweatshirts</p>
+                            <p class="brand-fellow">Jackets</p>
+                            <p class="brand-fellow">Tracksuits</p>
+                            <p class="brand-fellow">Compression Clothes</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Women</p>
+                            <p class="brand-fellow">T-Shirts</p>
+                            <p class="brand-fellow">Shorts</p>
+                            <p class="brand-fellow">Skorts</p>
+                            <p class="brand-fellow">Skirts</p>
+                            <p class="brand-fellow">Tights</p>
+                            <p class="brand-fellow">Tracksuits</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Junior</p>
+                            <p class="brand-fellow">T-Shirts</p>
+                            <p class="brand-fellow">Shorts</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <img class="category-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeOmvZU-qf1qoOor778D2yaBPKf2yHWKw9tw&usqp=CAU" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>ACCESSORIES
+                    <div class="mega-menu-5">
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Sports Bags</p>
+                            <p class="brand-fellow">Kit Bags</p>
+                            <p class="brand-fellow">Backpacks</p>
+                            <p class="brand-fellow">Duffle Bags</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Accessories</p>
+                            <p class="brand-fellow">Headbands</p>
+                            <p class="brand-fellow">Wristbands</p>
+                            <p class="brand-fellow">Caps</p>
+                            <p class="brand-fellow">Socks</p>
+                            <p class="brand-fellow">Towels</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">By Sports</p>
+                            <p class="brand-fellow">Tennis</p>
+                            <p class="brand-fellow">Squash</p>
+                            <p class="brand-fellow">Golf</p>
+                            <p class="brand-fellow">Badminton</p>
+                            <p class="brand-fellow">Running</p>
+                            <p class="brand-fellow">Table Tennis</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <img class="category-image" src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/BBKB751216363.jpg" alt="">
+                        </div>
+                        
+                        <div class="inner-mega-menu-1">
+                            <img class="category-image" src="https://storage.sg.content-cdn.io/cdn-cgi/image/width=500,height=500,quality=75,format=auto,fit=cover,g=top/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/ProductImages/Source/HD283471GRNY.jpg" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li>LEISURE SPORTS
+                    <div class="mega-menu-6">
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Leisure Sports</p>
+                            <p class="brand-fellow">Billiards</p>
+                            <p class="brand-fellow">Darts & Dartboard</p>
+                            <p class="brand-fellow">Skating</p>
+                            <p class="brand-fellow">Foosball</p>
+                        </div>
+                    </div>
+                </li>
+                <li>FANGEAR
+                    <div class="mega-menu-7">
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Soccer Leagues</p>
+                            <p class="brand-fellow">Arsenal</p>
+                            <p class="brand-fellow">Chelsa</p>
+                            <p class="brand-fellow">FC Barcelona</p>
+                            <p class="brand-fellow">Manchester City</p>
+                            <p class="brand-fellow">Manchester United</p>
+                            <p class="brand-fellow">Real Madrid</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Cricket</p>
+                            <p class="brand-fellow">Teams India</p>
+                        </div>
+                    </div>
+                </li>
+                <li>BRANDS
+                    <div class="mega-menu-8">
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">Brands Of Your Choice</p>
+                            <p class="brand-fellow">Babolat</p>
+                            <p class="brand-fellow">Donic</p>
+                            <p class="brand-fellow">Gunn And Moore</p>
+                            <p class="brand-fellow">Karakal</p>
+                            <p class="brand-fellow">Mikasa</p>
+                            <p class="brand-fellow">Power Glide</p>
+                            <p class="brand-fellow">SG</p>
+                            <p class="brand-fellow">Spalding</p>
+                            <p class="brand-fellow">Stag</p>
+                            <p class="brand-fellow">UHLSport</p>
+                            <p class="brand-fellow">Yonex</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">               </p>
+                            <p class="brand-fellow">Butterfly</p>
+                            <p class="brand-fellow">Dunlop</p>
+                            <p class="brand-fellow">Head</p>
+                            <p class="brand-fellow">Kookaburra</p>
+                            <p class="brand-fellow">NIKE</p>
+                            <p class="brand-fellow">Prince</p>
+                            <p class="brand-fellow">SKLZ</p>
+                            <p class="brand-fellow">Speedo</p>
+                            <p class="brand-fellow">Stiga</p>
+                            <p class="brand-fellow">Victor</p>
+                            <p class="brand-fellow">Zoggs</p>
+                        </div>
+
+                        <div class="inner-mega-menu-1">
+                            <p class="brand">             </p>
+                            <p class="brand-fellow">Cosco</p>
+                            <p class="brand-fellow">Gray Nicolls</p>
+                            <p class="brand-fellow">Joola</p>
+                            <p class="brand-fellow">Li-Ning</p>
+                            <p class="brand-fellow">Nittaku</p>
+                            <p class="brand-fellow">Puma</p>
+                            <p class="brand-fellow">Slazenger</p>
+                            <p class="brand-fellow">SS</p>
+                            <p class="brand-fellow">Tecnifibre</p>
+                            <p class="brand-fellow">Wison</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+ <!----Drop down Menu End-->
+
+
+
+    <div class="mainPage">
+        <div class="sidebar">
+            <div id="categoryMenu">
+                <h2>Category Menu</h2>
+                <div>
+                <ul>
+                    <li>Sports
+                        <ul>
+                            <li>Boxing</li>
+                            <li>Gloves</li>
+                            <li>Bags</li>
+                            <li>Accessories</li>
+                            <li><b>Cricket</b></li>
+                            <li>English Willow</li>
+                            <li>Kashmir Willow</li>
+                            <li>Balls</li>
+                            <li>Shoes</li>
+                            <li>Kit Bags</li>
+                            <li>Cricket Sets</li>
+                            <li>Protective Gear</li>
+                            <li>Clothing</li>
+                            <li>Accessories</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            <div id= "refineSearch">
+                <h2>Refined Search</h2>
+                <div id="filter">
+                    <h2>Category</h2>
+
+                </div>
+                <div id="filterbrand">
+                    <h2>Brand</h2>
+                </div>
+                <div id="filtersize">
+                    <h2>Size</h3>
+                </div>
+            </div>
+        </div>
+        <div class="mainContainer">
+            <div class="sortAndStuff">
+                <p id="itemsFound"></p>
+                <div id="screenchange">
+                    <p>SHOW <button id="flexofThree">3</button><button id="flexOfFour">4</button></p>
+                </div>
+               
+                <select name="sort" id="sortBy">
+                    <option value="">SORT BY</option>
+                    <option value="priceAsc">Price Low to High</option>
+                    <option value="priceDesc">Price High to Low</option>
+                    <option value="discount">Discount</option>
+                </select>
+            </div>
+            <div class="displayProducts"></div>
+        </div>
+    </div>
+    <!-- <div id="loadmorediv">
+        <button id="loadmore">LOAD MORE</button>
+    </div> -->
+    <div class="quickview">
+        <div id="qvstructure">
+            <div id="quickviewLeft"> 
+                <div class="quickViewImg"></div>
+            </div>
+            <div id="quickviewRight">
+                <div class="quickviewbtns">
+                    <button id="closequickview"><span>Close</span> X</button>
+                    <br>
+                    <button onclick="window.location.href = '../individualProduct.html'"><span>More Details</span>>></button>
+                </div>
+                <div class="quickviewdetailes">
+                    <h3>Description</h3>
+                    <div class="quickdesc">             <p></p>
+                    </div>
+                    <div id="quickviewBottom">
+                        <label for="quantity">Quantity</label>
+                        <input id="qty" name="quantity" type="number" min="1" placeholder="1">
+                        <div class="quantityPriceDisc"></div>
+                    </div>
+                    <button id="addToCart">Add To Cart</button>                 
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <!-- Footer section -->
+    <div class="container">
+        <div>
+            <li>
+                <i class="fa fa-gift gift"></i>
+            </li>
+            <a href="#">E-gift Voucher</a>
+        </div>
+        <div>
+            <li>
+                <i class="fas fa-award gift"></i>
+            </li>
+            <a href="#">Reward Points</a>
+        </div>
+        <div>
+            <li>
+                <i class="fas fa-book-open gift"></i>
+            </li>
+            <a href="#">Buyers Guide</a>
+        </div>
+        <div>
+            <li>
+                <i class="fas fa-table-tennis gift"></i>
+            </li>
+            <a href="">Customized Services</a>
+        </div>
+        <div>
+            <li>
+                <i class="fas fa-shipping-fast gift"></i>
+            </li>
+            <a href="#">Express Shipping</a>
+        </div>
+        <div>
+            <li>
+                <i class="fas fa-shield-alt gift"></i>
+            </li>
+            <a href="#">Secure Shopping</a>
+        </div>
+        <div>
+            <li>
+                <i class="fa fa-check-circle gift"></i>
+            </li>
+            <a href="#">100% Authentic</a>
+        </div>
+    </div>
+    
+    <div class="new_fotter">
+        <ul class="one">
+            <li class="title">Get to Know us</li>
+            <li><a href="" rel="nofollow" target="_blank">About Us</a></li>
+            <li><a href="" rel="nofollow" target="_blank">Contact Us</a></li>
+            <li><a href="" rel="nofollow" target="_blank">Inquiry / Feedback</a></li>
+            <li><a href="" target="_blank">Our Stores</a></li>
+            <li><a href="" rel="nofollow" target="_blank">Sportsjam Team</a></li>
+        </ul>
+        <ul class="one">
+            <li class="title">Here to help</li>
+            <li><a class="loginlnk LoginPopUpLink signin" href="#" rel="nofollow">Register / Login </a></li>
+            <li><a href="">Delivery &amp; Charges</a></li>
+            <li><a href="" rel="nofollow" target="_blank">Payment Options</a>
+            </li>
+            <li><a href="" rel="nofollow" target="_blank">FAQ's</a></li>
+            <li><a href="" rel="nofollow" target="_blank">Returns Policy</a></li>
+            <li><a href="" target="_blank">Track My Order</a></li>
+            <li><a href="#" rel="nofollow" target="_blank">Buy in Bulk</a></li>
+    
+        </ul>
+        <ul class="one">
+            <li class="title">Payments</li>
+            <li><img
+                    src="https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/Payments.png">
+            </li>
+        </ul>
+    
+        <ul class="Nlatter">
+            <li class="title">SIGN UP FOR NEWSLETTER</li>
+            <li>
+                <div class="newsletter"></div>
+                <ul class="one" style="margin:32px 0 0 0; padding:0;">
+                    <li class="title">Connect With Us</li>
+                    <li class="mob-icon" >
+                        <a href=""target="_blank" ><i class="fab fa-facebook-square links"></i></a> 
+                        <a href="" target="_blank"><i class="fab fa-twitter links"></i></a>
+                        <a href="" target="_blank"><i class="fab fa-instagram-square links"></i></a> 
+                        <a href="" target="_blank"><i class="fab fa-youtube links"></i></a>
+                    </li>
+                    <li>
+                        <img class="ssl" src="https://storage.sg.content-cdn.io/in-resources/b368029c-a4dd-448a-a888-58348cb1b144/Images/userimages/ssl.png">
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="copy-right"><span>COPYRIGHT</span></div>
+        <div class="powered_by">
+            <span>POWERED BY</span>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4luynuJj_KZMEAsAukNgmZpKPZH9jAd0CqA&usqp=CAU" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>
+<script src="basketballProducts.js"></script>

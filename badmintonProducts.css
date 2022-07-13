@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* MAIN PAGE CSS */
+.mainPage {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15% 80%;
+    padding: 10px;
+}
+.maincontainer{
+    width: 100%;
+}
+
+.displayProducts{
+    display:flex;
+    flex-wrap: wrap;
+}
+.productDiv {
+    flex: 25%;
+    margin: 2%;
+    margin-bottom: 50px;
+    width: 200px;
+    font-family: "open sans";
+    
+}
+.productDiv>img:nth-child(2) {
+    width: 100%;    
+}
+.productDiv>div{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.productDiv:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.productDiv>.wlIcon{
+    width: 20px;
+    margin-left: 80%;
+}
+.sortAndStuff {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid grey;
+}
+.productDiv img{
+    width: 90%;    
+}
+
+#categoryMenu>div{
+    height: 100px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+#categoryMenu li{
+    list-style-type: none;
+    font-size: 15px;
+}
+#categoryMenu>h2, #refineSearch>h2{
+    background-color: #cacaca;
+    font-size: 18px;
+    font-weight: 100;
+    padding: 5px;
+}
+#refineSearch h2{
+    font-size: 14px;
+    padding: 0 0 0 10px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    line-height: 40px;
+    border-bottom: 1px solid #e9e9e9;
+    font-weight: 400;
+}
+#filter input{
+    font-size: 14px;
+}
+#flexofThree{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-right: 2px;
+
+}
+#flexOfFour{
+    background-color: lightgrey;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    margin-left: 2px;
+}
+#flexofThree:hover, #flexOfFour:hover{
+    background-color: black;
+}
+#screenchange{
+    margin: 0 50px;
+}
+#itemsFound{
+    margin-right: 15%;
+    font-size: 100.01%;
+    font-weight: 900;
+}
+
+
+#sortBy{
+    width: 250px;
+    border: 1px solid lightgrey
+}
+#loadmorediv{
+    text-align: center;
+}
+
+#loadmore{
+    padding: 20px;
+    border-radius: 10px;
+    background-color: lightgrey;
+    color: white;
+    margin-bottom: 20px;
+}
+#loadmore:hover{
+    background-color: black;
+    cursor: pointer;
+}
+/* THe Quick view features CSS */
+.quickviewbtn{
+    /* width: 100%; */
+    height: 30px;
+    background-color: black;
+    color: white;
+    position: relative;
+    top: -50%;
+    left: 40%;
+    padding: 10 20px;
+    display: none;
+}
+.quickviewbtn:hover{
+    display: block;
+}
+
+.quickview{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 30%;
+    top:20%;
+    width: 50%;
+    height: 400px;
+    margin:auto;
+    background-color: white;
+    border: 5px solid orange;
+    
+}
+#qvstructure{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+}
+#quickviewRight {
+    display: grid;
+    grid-template-rows: 50px 400px;
+    grid-template-columns: 40% 30% 30%;
+    grid-template-areas: 
+    ". . x"
+    "d d d";
+}
+.quickviewbtns{
+    grid-area: x;
+    
+}
+.quickviewbtns>button{
+    color: grey;
+}
+.quickviewbtns span{
+    border-right: 1px solid grey;
+}
+.quickviewdetailes{
+    grid-area: d;
+    margin-top: 50px;
+}
+#quickviewtop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quickViewImg>img{
+    width: 90%;
+    border: 1px solid grey;
+}
+.quickviewdetailes>h3{
+    margin-bottom: 0;
+    border-bottom: 1px solid black;
+}
+.quickdesc>p{
+    border: 1px solid grey;
+    color: grey;
+    padding: 20px;
+    margin-top: 0;
+    width: 90%;
+}
+
+#quickviewBottom{
+    display: flex;
+}
+.quantityPriceDisc>p{
+    display: inline;
+    margin: 0 10px;
+}
+.quantityPriceDisc>p:first-child{
+    display: inline;
+    margin: 0 10px;
+    color: grey;
+}
+#qty {
+    height: 20px;
+    width: 30px;
+}
+
+
+.quickviewbtns{
+    display: block;
+    justify-content: flex-end;
+}
+#addToCart{
+    margin-top: 20px;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+}
+
