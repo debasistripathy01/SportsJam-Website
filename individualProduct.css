@@ -1,0 +1,123 @@
+/* HEADER CSS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+/* MAIN PAGE CSS */
+.mainPage{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#prices{
+  display: flex;
+}
+#prices>p{
+
+  margin: 20px 10px;
+}
+#btnandqty{
+  margin-top: 20px;
+  display: flex;
+}
+#btnandqty>button{
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 10px 15px
+}
+/* #btnandqty>input{
+  border: 1px solid black;
+  width: 50px;
+  margin-left: 20px;
+} */
+#btnandqty>label{
+  margin-left: 10px;
+}
+.qtycontrol{
+  width: 20px;
+}
+.qtycontrol+input{
+  width: 20px;
+}
+#qtydiv{
+  display: flex;
+  border: 1px solid grey;
+  width: 60px;
+  margin-left: 10px;
+  height: 20px;
+}
+#desc>h1{
+  border-bottom: 1px solid grey;
+  width: 90%;
+}
+#socialMediaIcons>img {
+  margin: 10px 10px;
+}
+#socialMediaIcons>img:hover{
+  cursor: pointer;
+}
+
+.smalltext {
+  color:grey;
+  font-size: 14px;
+  margin: 20px 10px;
+}
+.smalltext:hover{
+  cursor: pointer;
+}
+input+button{
+  background-color: black;
+  color: white;
+  padding: 10px;
+
+}
+button:hover{
+  cursor: pointer;
+}
+#report{
+  color: blue;
+  margin-top: 20px;
+}
+#report:hover{
+  color: orange;
+  cursor: pointer;
+}
+img[src="https://previews.123rf.com/images/grgroup/grgroup1703/grgroup170302648/73144390-blurred-silhouette-oval-dialog-box-icon-vector-illustration.jpg"]{
+  width: 20px;
+  display: inline;
+  color: blue;
+}
+img[src="https://www.clipartmax.com/png/middle/137-1378401_refer-a-friend-material-design-icon-group.png"],img[src= "https://cdn0.iconfinder.com/data/icons/online-clothes-shopping-set/128/iStar_Design_Online_Shopping_LineIcons_Live-26-512.png"]{
+  width: 20px;
+}
+
+#cartDisplay{
+  display:none;
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  width: 150px;
+  max-height: 500px;
+  overflow: scroll;
+  overflow-x: hidden;
+  border: 8px solid black;
+  border-top: 15px solid black;
+}
+#cartDisplay p{
+  font-size: 12px;
+  padding: 2px;
+}
+#closeCart{
+  margin-left: 90%;
+}
+
+
